@@ -1,17 +1,10 @@
 <template>
   <div>
     <el-scrollbar wrap-class="scrollbar-wrapper">
-      <el-menu default-active="2"
-               @open="handleOpen"
-               @close="handleClose"
-               :background-color="variables.menuBg"
-               :text-color="variables.menuText"
-               :unique-opened="false"
-               :active-text-color="variables.menuActiveText"
-               mode="vertical">
+      <el-menu default-active="2" @open="handleOpen" @close="handleClose" :collapse="isCollapse" :background-color="variables.menuBg" :text-color="variables.menuText" :unique-opened="false" :active-text-color="variables.menuActiveText" mode="vertical">
         <el-submenu index="1">
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <svg-icon icon-class="excel"></svg-icon>
             <span>导航一</span>
           </template>
           <el-menu-item-group>
@@ -47,7 +40,7 @@
         </el-submenu>
         <el-submenu index="1">
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <svg-icon icon-class="excel"></svg-icon>
             <span>导航一</span>
           </template>
           <el-menu-item-group>
@@ -65,8 +58,8 @@
         </el-submenu>
         <el-submenu index="1">
           <template slot="title">
-            <i class="el-icon-location"></i>
-            <span>导航一</span>
+            <svg-icon icon-class="excel"></svg-icon>
+            <span>导航一aaaa</span>
           </template>
           <el-menu-item-group>
             <template slot="title">分组一</template>
@@ -96,7 +89,7 @@
 
 <script>
 import variables from '@/styles/variables.scss'
-
+import { mapGetters } from 'vuex'
 export default {
   methods: {
     handleOpen (key, keyPath) {
@@ -107,9 +100,16 @@ export default {
     }
   },
   computed: {
+    ...mapGetters([
+      'sidebar'
+    ]),
     variables () {
       console.log(variables, 'variables')
       return variables
+    },
+    isCollapse () {
+      console.log(this.sidebar, 'this.sidebar')
+      return !this.sidebar.opened
     }
   }
 }

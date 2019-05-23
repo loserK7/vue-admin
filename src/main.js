@@ -4,7 +4,7 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import App from './App.vue'
 import router from './router'
-
+import './icons'
 import '@/assets/css/reset.css' // 初始化样式
 import 'element-ui/lib/theme-chalk/index.css'
 // import Message from '@/components/message.js'

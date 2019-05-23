@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="app-main">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
@@ -9,5 +11,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scope>
+.app-main{
+  min-height:calc(100vh - 50px);
+}
 </style>
