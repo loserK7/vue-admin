@@ -35,16 +35,17 @@
       right: 0px;
     }
     .svg-icon {
-      margin-right:16px;
+      margin-right: 16px;
     }
   }
   .hideSidebar {
     .sidebar-container {
       width: 54px !important;
+      .svg-icon {
+        margin-left: 20px;
+      }
     }
-    .svg-icon {
-      margin-left:20px;
-    }
+
     .el-menu--collapse {
       width: 54px !important;
     }

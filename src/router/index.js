@@ -9,13 +9,13 @@ export default new Router({
     {
       path: '/',
       component: Layout,
-      redirect: '/Index',
+      redirect: '/dashboard',
       children: [
         {
-          path: 'Index',
-          component: () => import('@/views/index'),
-          name: 'Index',
-          meta: { title: 'Index', icon: 'dashboard', affix: true }
+          path: 'dashboard',
+          component: () => import('@/views/dashboard/index'),
+          name: 'Dashboard',
+          meta: { title: 'dashboard', icon: 'dashboard', affix: true }
         }
       ]
     },

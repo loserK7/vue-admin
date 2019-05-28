@@ -2,10 +2,14 @@
   <div>
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu default-active="2" @open="handleOpen" @close="handleClose" :collapse="isCollapse" :background-color="variables.menuBg" :text-color="variables.menuText" :unique-opened="false" :active-text-color="variables.menuActiveText" mode="vertical">
+        <el-menu-item index="Dashboard">
+          <svg-icon icon-class="excel"></svg-icon>
+          <span slot="title">Dashboard</span>
+        </el-menu-item>
         <el-submenu index="1">
           <template slot="title">
             <svg-icon icon-class="excel"></svg-icon>
-            <span>导航一</span>
+            <span>Dashboard</span>
           </template>
           <el-menu-item-group>
             <template slot="title">分组一</template>
