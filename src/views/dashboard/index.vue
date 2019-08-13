@@ -3,6 +3,7 @@
     <div class="dashboard-editor-container">
       <!-- github -->
       <a class="github-corner"></a>
+
       <PanelGroup></PanelGroup>
 
       <el-row :gutter="8">
@@ -10,7 +11,7 @@
           <transactoin-table></transactoin-table>
         </el-col>
         <el-col :span="6" style="margin-bottom:30px">
-
+          <todo-list></todo-list>
         </el-col>
         <el-col :span="6" style="margin-bottom:30px">
 
@@ -23,10 +24,12 @@
 <script>
 import PanelGroup from './components/PanelGroup'
 import TransactoinTable from './components/TransactionTable'
+import TodoList from './components/TodoList'
 export default {
   components: {
     PanelGroup,
-    TransactoinTable
+    TransactoinTable,
+    TodoList
   }
 }
 </script>

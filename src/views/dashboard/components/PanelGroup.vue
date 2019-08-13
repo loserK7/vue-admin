@@ -1,6 +1,6 @@
 <template>
   <el-row class="panel-group" :gutter="40">
-    <el-col :span="6" class="card-panel-col">
+    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel">
         <div class="card-panel-icon-wrapper icon-people">
           <svg-icon icon-class="peoples" class-name="card-panel-icon" />
@@ -15,7 +15,7 @@
         </div>
       </div>
     </el-col>
-    <el-col :span="6" class="card-panel-col">
+    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel">
         <div class="card-panel-icon-wrapper icon-message">
           <svg-icon icon-class="message" class-name="card-panel-icon" />
@@ -30,7 +30,7 @@
         </div>
       </div>
     </el-col>
-    <el-col :span="6" class="card-panel-col">
+    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel">
         <div class="card-panel-icon-wrapper icon-money">
           <svg-icon icon-class="money" class-name="card-panel-icon" />
@@ -45,7 +45,7 @@
         </div>
       </div>
     </el-col>
-    <el-col :span="6" class="card-panel-col">
+    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel">
         <div class="card-panel-icon-wrapper icon-shopping">
           <svg-icon icon-class="shopping" class-name="card-panel-icon" />
@@ -76,6 +76,7 @@ export default {
     margin-bottom: 32px;
     .card-panel {
       height: 108px;
+      overflow: hidden;
       cursor: pointer;
       background: #fff;
       font-size: 12px;

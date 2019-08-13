@@ -1,15 +1,23 @@
 <template>
   <div>
     <el-scrollbar wrap-class="scrollbar-wrapper">
-      <el-menu default-active="2" @open="handleOpen" @close="handleClose" :collapse="isCollapse" :background-color="variables.menuBg" :text-color="variables.menuText" :unique-opened="false" :active-text-color="variables.menuActiveText" mode="vertical">
-        <el-menu-item index="Dashboard">
+      <el-menu default-active="2" router @open="handleOpen" @close="handleClose" :collapse="isCollapse" :background-color="variables.menuBg" :text-color="variables.menuText" :unique-opened="false" :active-text-color="variables.menuActiveText" mode="vertical">
+        <el-menu-item index="/">
           <svg-icon icon-class="excel"></svg-icon>
           <span slot="title">Dashboard</span>
         </el-menu-item>
-        <el-submenu index="1">
+        <el-menu-item index="/editor">
+          <svg-icon icon-class="excel"></svg-icon>
+          <span slot="title">富文本</span>
+        </el-menu-item>
+        <el-menu-item index="/clipboard">
+          <svg-icon icon-class="excel"></svg-icon>
+          <span slot="title">clipboard</span>
+        </el-menu-item>
+        <el-submenu index="/clipboard">
           <template slot="title">
             <svg-icon icon-class="excel"></svg-icon>
-            <span>Dashboard</span>
+            <span>clipboard</span>
           </template>
           <el-menu-item-group>
             <template slot="title">分组一</template>
